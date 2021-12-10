@@ -1,0 +1,37 @@
+label{
+    float: left;
+    margin-right: 20px;
+    width : 300px
+}
+
+.input-form-text {
+    margin-bottom: 15px !important;
+    height : 50px !important;
+}
+    input[type='radio']:after {
+        width: 18px;
+        height: 18px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 3px solid white;
+    }
+
+    input[type='radio']:checked:after {
+        width: 18px;
+        height: 18px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: rgb(10, 84, 193);
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 3px solid white;
+    }
