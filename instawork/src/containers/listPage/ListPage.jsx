@@ -9,7 +9,6 @@ const data = require('../../test.json');
 
 
 const ListPage = () => {
-    let count = 3
     let persons = data
     const dispatch = useDispatch();
 
@@ -27,7 +26,7 @@ const ListPage = () => {
             <div className='main-container'>
                 <div className='sub-container'>
                     <div className='icon'><Plus size={40} onClick={handleClick}/></div>
-                    <Description mainHeading = {"Team Members"} subHeading = {"You have " + count + " team members."}/>
+                    <Description mainHeading = {"Team Members"} subHeading = {"You have " + data.length + " team members."}/>
                     <div className='user-list'>
                         { persons.map(e=><SingleUserDiplay user = {e}/>)}
                     </div>
