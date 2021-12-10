@@ -2,6 +2,7 @@ import React , {useState} from 'react'
 import './userinfoform.css'
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
+import {baseurl,add} from '../../constants'
 
 
 const UserInfoForm = (props) => {
@@ -20,12 +21,19 @@ const UserInfoForm = (props) => {
 
     const onSubmit = (data)=>{
         setFormValues(data)
-        dispatch({
-            type: "SCREEN",
-            screen: "list"
-          })
-    } 
-
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        }
+        fetch(baseurl + add, requestOptions)
+            .then(response => {
+                dispatch({
+                    type: "SCREEN",
+                    screen: "list"
+                })
+            })
+    }
 
     return (
         <div>

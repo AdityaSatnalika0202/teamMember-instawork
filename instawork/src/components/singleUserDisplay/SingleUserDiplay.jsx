@@ -24,7 +24,7 @@ const SingleUserDiplay = (props) => {
                         <PersonCircle size={75} />
                     </div>  
                     <div class="flex-item-user-details">
-                        <div className='userName'> {user.firstName + " " + user.lastName} </div>
+                        <div className='userName'> {user.firstName + " " + user.lastName +" (" + user.role +") "} </div>
                         <div className='phoneNumber'> {user.contact} </div>
                         <div className='email'> {user.email} </div>                        
                     </div>  
