@@ -1,9 +1,12 @@
 import React , {useState} from 'react'
 import './userinfoform.css'
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
 
 
 const UserInfoForm = () => {
+    const dispatch = useDispatch();
+
     const [formValue,setFormValues] = useState({
         firstName: '',
         lastName: '',
@@ -16,8 +19,11 @@ const UserInfoForm = () => {
       });
 
     const onSubmit = (data)=>{
-        console.log(data)
         setFormValues(data)
+        dispatch({
+            type: "SCREEN",
+            screen: "list"
+          })
     } 
 
 
