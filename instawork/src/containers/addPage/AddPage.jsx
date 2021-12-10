@@ -1,10 +1,20 @@
 import React from 'react'
 import './addpage.css'
+import Header from '../../components/header/Header';
+import Description  from '../../components/description/Description'
 
 const AddPage = () => {
     return (
-        <div>
-            Add File
+        <div className='container-placeholder'>
+            <Header headerName = "Add Page" />
+            <div className='main-container'>
+                <div className='sub-container'>
+                    <Description mainHeading = {"Add a team member"} subHeading = {"Set email, location and role"}/>
+
+                    <div className='save-button'><button type="button" class="btn btn-primary">Save</button></div>
+                </div>
+            </div>
+            
         </div>
     )
 }

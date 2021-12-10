@@ -6,7 +6,7 @@ import { AddPage,EditPage,ListPage } from './containers'
 const App = () => {
     return (
         <div style={{margin:"auto"}}>
-           <ListPage />
+           <AddPage />
         </div>
     )
 }
