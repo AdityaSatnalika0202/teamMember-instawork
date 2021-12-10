@@ -1,0 +1,18 @@
+.flex-container {  
+    display: flex;  
+    flex-direction: row;
+    cursor: pointer;
+}  
+.flex-item-profile-picture {  
+    flex: 1;
+
+}  
+.flex-item-user-details { 
+    padding-left: 20px; 
+    padding-top:0px;
+    flex: 4;
+    font-size: 18px;
+}  
+.phoneNumber, .email{
+    color: rgb(131, 131, 131);
+}

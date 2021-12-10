@@ -1,0 +1,28 @@
+.pageHeading {
+    background-color: rgb(230, 228, 228);
+    text-align: center;
+    padding-top: 20px;
+}
+.container-placeholder{
+    margin:auto;
+    width : 400px;
+    height : 100px;
+    margin-top: 10%;
+}
+.icon{
+    text-align: right;
+    cursor: pointer;
+}
+.subHeading{
+    color: rgb(131, 131, 131);   
+    font-size: 19px; 
+}
+.main-container{
+    background-color: rgb(230, 228, 228);
+    padding: 10px;
+}
+.sub-container{
+    padding :10px;
+    padding-left: 20px;
+    background-color: white;
+}
