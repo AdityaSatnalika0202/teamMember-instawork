@@ -5,7 +5,7 @@ import SingleUserDiplay from '../../components/singleUserDisplay/SingleUserDipla
 
 const ListPage = () => {
     let count = 3
-    let persons = [{},{},{}]
+    let persons = [{},{},{},{},{},{}]
     return (
         <div className='container-placeholder'>
             <div className='pageHeading'>
@@ -17,7 +17,9 @@ const ListPage = () => {
                     <div> <h2> <b> Team Members </b></h2></div>
                     <p className='subHeading'>You have {count} team members.</p>
                     <hr></hr>
+                    <div className='user-list'>
                     { persons.map(e=><SingleUserDiplay/>)}
+                    </div>
                 </div>
             </div>
             
