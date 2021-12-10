@@ -19,8 +19,8 @@
     padding-bottom: 20px;
     position: relative;
 }
-.icon{
-    text-align: right;
+.icon-edit-page{
+    text-align: left !important;
     cursor: pointer;
 }
 .user-list{

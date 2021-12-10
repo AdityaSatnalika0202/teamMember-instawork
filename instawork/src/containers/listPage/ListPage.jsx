@@ -5,11 +5,12 @@ import SingleUserDiplay from '../../components/singleUserDisplay/SingleUserDipla
 import Header from '../../components/header/Header';
 import Description  from '../../components/description/Description'
 import { useDispatch } from "react-redux";
+const data = require('../../test.json');
 
 
 const ListPage = () => {
     let count = 3
-    let persons = [{},{},{},{},{},{}]
+    let persons = data
     const dispatch = useDispatch();
 
 
@@ -28,7 +29,7 @@ const ListPage = () => {
                     <div className='icon'><Plus size={40} onClick={handleClick}/></div>
                     <Description mainHeading = {"Team Members"} subHeading = {"You have " + count + " team members."}/>
                     <div className='user-list'>
-                        { persons.map(e=><SingleUserDiplay/>)}
+                        { persons.map(e=><SingleUserDiplay user = {e}/>)}
                     </div>
                 </div>
             </div>

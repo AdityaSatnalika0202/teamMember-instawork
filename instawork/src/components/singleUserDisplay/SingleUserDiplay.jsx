@@ -4,13 +4,16 @@ import { PersonCircle } from 'react-bootstrap-icons';
 import { useDispatch } from "react-redux";
 
 
-const SingleUserDiplay = () => {
+const SingleUserDiplay = (props) => {
+    const user = props.user
+
     const dispatch = useDispatch();
 
     const handleClick = () => {
         dispatch({
-            type: "SCREEN",
-            screen: "edit"
+            type: "EDIT",
+            screen: "edit",
+            user : user
           })
     }
 
@@ -21,9 +24,9 @@ const SingleUserDiplay = () => {
                         <PersonCircle size={75} />
                     </div>  
                     <div class="flex-item-user-details">
-                        <div className='userName'> Test User Name </div>
-                        <div className='phoneNumber'> 456-725-5067 </div>
-                        <div className='email'> test@instaworks.com </div>                        
+                        <div className='userName'> {user.firstName + " " + user.lastName} </div>
+                        <div className='phoneNumber'> {user.contact} </div>
+                        <div className='email'> {user.email} </div>                        
                     </div>  
                     <hr/>
             </div> 

@@ -5,13 +5,19 @@ import Description  from '../../components/description/Description'
 import UserInfoForm from '../../components/userInfoForm/UserInfoForm';
 
 const AddPage = () => {
+    const user = {
+        "firstName" : "",
+        "lastName" : "",
+        "email" : "",
+        "contact" : ""
+      }
     return (
         <div className='container-placeholder'>
             <Header headerName = "Add Page" />
             <div className='main-container'>
                 <div className='sub-container'>
                     <Description mainHeading = {"Add a team member"} subHeading = {"Set email, location and role"}/>
-                    <UserInfoForm />
+                    <UserInfoForm  user = {user}/>
                 </div>
             </div>
             

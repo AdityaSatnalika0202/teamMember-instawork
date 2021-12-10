@@ -4,11 +4,14 @@ import Header from '../../components/header/Header';
 import Description  from '../../components/description/Description'
 import UserInfoForm from '../../components/userInfoForm/UserInfoForm';
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { ArrowLeftCircle } from 'react-bootstrap-icons';
 
 
 
 const EditPage = () => {
     const dispatch = useDispatch();
+    const user = useSelector(state => state.user);
 
     const handleClick = () => {
         dispatch({
@@ -16,6 +19,7 @@ const EditPage = () => {
             screen: "list"
           })
     }
+    
 
     return (
         <div>
@@ -23,8 +27,9 @@ const EditPage = () => {
                     <Header headerName = "Edit Page" />
                     <div className='main-container'>
                         <div className='sub-container'>
-                            <Description mainHeading = {"Edit team member"} subHeading = {"Set email, location and role"}/>
-                            <UserInfoForm />
+                                <div className='icon-edit-page'><ArrowLeftCircle size={25} onClick={handleClick}/></div>
+                                <Description mainHeading = {"Edit team member"} subHeading = {"Set email, location and role"}/>
+                            <UserInfoForm user = {user}/>
                             <div className='delete-button'><button type="button" class="btn btn-primary"  onClick={handleClick}>Delete</button></div>
                         </div>
                     </div>

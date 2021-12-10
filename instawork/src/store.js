@@ -6,6 +6,12 @@ function reducer(state = { screen: "list" }, action) {
           ...state,
           screen: action.screen
         };
+      case "EDIT":
+          return {
+            ...state,
+            screen: action.screen,
+            user : action.user
+          };
       default:
         return state;
     }
