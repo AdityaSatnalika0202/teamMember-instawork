@@ -13,7 +13,7 @@ const UserInfoForm = (props) => {
         lastName: props.user.lastName ?  props.user.lastName : "",
         email: props.user.email ? props.user.email : "",
         contact: props.user.contact ? props.user.contact : "",
-        role: 'regular'
+        role: props.user.role ? props.user.role : 'regular'
     })
     const { register, handleSubmit } = useForm({
         defaultValues: formValue
