@@ -1,0 +1,48 @@
+.container-placeholder{
+    margin:auto;
+    width : 400px;
+    height : 100px;
+    margin-top: 5%;
+}
+.main-container{
+    margin-top:5px;
+    background-color: rgb(230, 228, 228);
+    padding: 10px;
+    max-height: 700px;
+    overflow: hidden;
+}
+.sub-container{
+    padding :10px;
+    padding-left: 20px;
+    background-color: white;
+    height: 660px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.icon{
+    text-align: right;
+    cursor: pointer;
+}
+.user-list{
+    max-height: 500px;
+    overflow: auto;
+}
+.btn{
+    padding: 10px 30px !important;
+}
+.save-button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.delete-button{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.delete-button > button{
+    background-color: transparent;
+    color: rgb(175, 64, 64);
+    border: 1px solid lightgray;
+
+}
