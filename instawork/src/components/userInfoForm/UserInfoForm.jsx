@@ -1,27 +1,45 @@
-import React from 'react'
-import {Form} from 'react-bootstrap'
+import React , {useState} from 'react'
 import './userinfoform.css'
+import { useForm } from "react-hook-form";
 
 
 const UserInfoForm = () => {
+    const [formValue,setFormValues] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        number: '',
+        role: 'regular'
+    })
+    const { register, handleSubmit } = useForm({
+        defaultValues: formValue
+      });
+
+    const onSubmit = (data)=>{
+        console.log(data)
+        setFormValues(data)
+    } 
+
+
     return (
         <div>
             <h5 className='mb-3'>Info</h5> 
-            <form onSubmit={()=>{}} >            
-                <input className="form-control input-form-text" type="text" value={""} placeholder='Enter First Name' onChange={()=>{}} />
-                <input className="form-control input-form-text" type="text" value={""} placeholder='Enter Last Name' onChange={()=>{}} />
-                <input className="form-control input-form-text" type="text" value={""} placeholder='Enter Email' onChange={()=>{}} />
-                <input className="form-control input-form-text" type="text" value={""} placeholder='Enter Contact Number' onChange={()=>{}} />
+            <form className='mb-4'  onSubmit={handleSubmit(onSubmit)} >            
+                <input className="form-control input-form-text" type="text" placeholder='Enter First Name' {...register("firstName")} required/>
+                <input className="form-control input-form-text" type="text" placeholder='Enter Last Name' {...register("lastName")} required/>
+                <input className="form-control input-form-text" type="email" placeholder='Enter Email' {...register("email")} required/>
+                <input className="form-control input-form-text" type="text" placeholder='Enter Contact Number' {...register("number")} required/>
+                <div className='save-button'><input type="submit" class="btn btn-primary" value={"Save"} /></div>
             </form>
-            <br/>
             <h5 className='mb-3'>Role</h5> 
-            <form className=''>
-             <input type="radio" value="regular" id="male" onChange={()=>{}} name="role" defaultChecked />
-                <label for="regular">Regular - Can't delete members</label> <br/>
-             <hr/>
-            <input type="radio" value="admin" id="female" onChange={()=>{}} name="role"/>
-            <label for="admin">Admin - Can delete members</label>
-         </form>
+            <form >
+                <input type="radio" value="regular" id="regular" name="role" {...register("role")}/>
+                <label for="regular" >Regular - Can't delete members</label> <br/>
+                <hr/>
+                <input type="radio" value="admin" id="admin" name="role" {...register("role")}/>
+                <label for="admin" >Admin - Can delete members</label>
+                <hr/>
+            </form>
         </div>
     )
 }

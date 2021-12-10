@@ -8,6 +8,17 @@ label{
     margin-bottom: 15px !important;
     height : 50px !important;
 }
+.save-button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.grey-out{
+    color : lightgray !important;
+}
+.normal{
+    color : black !important
+}
     input[type='radio']:after {
         width: 18px;
         height: 18px;

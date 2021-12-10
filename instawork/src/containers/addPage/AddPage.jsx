@@ -12,8 +12,6 @@ const AddPage = () => {
                 <div className='sub-container'>
                     <Description mainHeading = {"Add a team member"} subHeading = {"Set email, location and role"}/>
                     <UserInfoForm />
-
-                    <div className='save-button'><button type="button" class="btn btn-primary">Save</button></div>
                 </div>
             </div>
             

@@ -12,8 +12,6 @@ const EditPage = () => {
                         <div className='sub-container'>
                             <Description mainHeading = {"Edit team member"} subHeading = {"Set email, location and role"}/>
                             <UserInfoForm />
-
-                            <div className='save-button'><button type="button" class="btn btn-primary">Save</button></div>
                             <div className='delete-button'><button type="button" class="btn btn-primary">Delete</button></div>
                         </div>
                     </div>
