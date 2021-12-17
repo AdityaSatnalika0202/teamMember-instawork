@@ -14,7 +14,7 @@ const Loader = require('react-loader');
 
 const ListPage = () => {
     //let persons = data
-    let loaded = useSelector(state => state.loaded)
+
     const dispatch = useDispatch();
     let persons = useSelector(state => state.user_list);
     useEffect(() => {

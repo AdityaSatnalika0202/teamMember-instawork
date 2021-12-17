@@ -26,6 +26,10 @@ const EditPage = () => {
             .then(data=>{
                 alert("Delete Success")
                 dispatch({
+                    type: "LOADER",
+                    loaded: false
+                })
+                dispatch({
                     type: "SCREEN",
                     screen: "list"
                 })
