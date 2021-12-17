@@ -41,7 +41,7 @@ const ListPage = () => {
                 <div className='sub-container'>
                     <div className='icon'><Plus size={40} onClick={handleClick}/></div>
                     <Description mainHeading={"Team Members"}
-                                 subHeading={"You have " + persons.length + " team members."}/>
+                                 subHeading={"You have " + persons.length + " team" + (persons.length != 1 ? " members." : " member.") }/>
 
                     <div className='user-list'>
                         {
