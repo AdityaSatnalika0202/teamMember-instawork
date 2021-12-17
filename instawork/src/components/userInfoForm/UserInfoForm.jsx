@@ -42,7 +42,7 @@ const UserInfoForm = (props) => {
                 <input className="form-control input-form-text" type="text" placeholder='Enter First Name' {...register("firstName")} required/>
                 <input className="form-control input-form-text" type="text" placeholder='Enter Last Name' {...register("lastName")} required/>
                 <input className="form-control input-form-text" type="email" placeholder='Enter Email' {...register("email")} required/>
-                <input className="form-control input-form-text" type="text" placeholder='Enter Contact Number' {...register("contact")} required/>
+                <input className="form-control input-form-text" type="tel" placeholder='Enter Contact Number (111-111-1111)' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" {...register("contact")} required/>
                 <div className='save-button'><input type="submit" class="btn btn-primary" value={"Save"} /></div>
             </form>
             <h5 className='mb-2'>Role</h5> 
